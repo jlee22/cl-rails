@@ -28,6 +28,21 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use devise for user auth
+gem 'devise'
+
+# Formatters for ease of debugging
+gem 'awesome_print'
+gem 'better_errors'
+gem 'binding_of_caller'
+
+# Bootstrap sass gems
+gem 'bootstrap-sass', '~> 3.3.6'
+
+# Faker for seeding data
+gem 'faker'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
