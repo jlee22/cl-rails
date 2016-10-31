@@ -1,0 +1,32 @@
+
+<h2>New Article</h2>
+
+<%= form_for :article, url: category_articles_path(@category) do |f| %>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.select :category_id, Category.all.collect { |c| [c.name, c.id] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+<%= link_to("Back", categories_path) %>
