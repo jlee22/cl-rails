@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root "categories#index"
 
   resources :categories, only: [:index, :show] do
-    resources :articles
+    resources :articles, except: [:index]
   end
 end
