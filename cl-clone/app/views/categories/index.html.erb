@@ -1,0 +1,7 @@
+<div>
+  category index
+</div>
+
+<% @categories.each do |category| %>
+  <%= link_to(category.name, category) %><br>
+<% end %>
